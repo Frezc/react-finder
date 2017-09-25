@@ -10,3 +10,4 @@ http://frezc.github.io/react-finder/examples/
 - [ ] support drag across level
 - [ ] add simple finder Component like finder.js
 - [ ] write test
+
