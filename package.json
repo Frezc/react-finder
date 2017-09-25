@@ -22,7 +22,7 @@
     "port": 8010
   },
   "devDependencies": {
-    "jest": "^21.0.0",
+    "jest": "^21.1.0",
     "rc-tools": "^7.0.0",
     "react-dom": "^15.6.1"
   },
