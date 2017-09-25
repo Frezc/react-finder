@@ -1,0 +1,33 @@
+.react-finder-container {
+  display: flex;
+  background-color: white;
+  border: solid 1px lightgray;
+  font-size: 14px;
+  min-height: 400px;
+  overflow: auto; }
+.react-finder-column {
+  border-right: solid 1px lightgray;
+  max-height: 600px;
+  min-height: inherit;
+  min-width: 200px;
+  overflow-y: auto; }
+.react-finder-item {
+  padding: 6px;
+  cursor: pointer;
+  font-size: 14px; }
+  .react-finder-item:hover {
+    background-color: #ecf6fd; }
+  .react-finder-item.opened {
+    background-color: #DEDEDE; }
+  .react-finder-item.selected {
+    background-color: dodgerblue;
+    color: white; }
+.react-finder-detail {
+  align-items: center;
+  border-right: 0;
+  display: flex;
+  flex: 2;
+  justify-content: center;
+  padding: 0 1.5em; }
+
+/*# sourceMappingURL=styles.css.map */

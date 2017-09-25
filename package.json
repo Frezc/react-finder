@@ -1,0 +1,35 @@
+{
+  "name": "react-finder",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./lib/index",
+  "scripts": {
+    "build": "rc-tools run build",
+    "compile": "rc-tools run compile --babel-runtime",
+    "gh-pages": "rc-tools run gh-pages",
+    "start": "rc-tools run server",
+    "pub": "rc-tools run pub --babel-runtime",
+    "lint": "rc-tools run lint",
+    "lint:fix": "rc-tools run lint --fix",
+    "test": "jest",
+    "prepublish": "rc-tools run guard",
+    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "config": {
+    "port": 8010
+  },
+  "devDependencies": {
+    "jest": "^21.0.0",
+    "rc-tools": "^7.0.0",
+    "react-dom": "^15.6.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.10",
+    "react": "^15.6.1",
+    "react-sortable-hoc": "^0.6.7"
+  }
+}
