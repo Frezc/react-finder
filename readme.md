@@ -2,7 +2,7 @@ Implement finder in react.
 Base on react, react-sortable-hoc and some lodash helper.
 
 ## example
-http://http://frezc.github.io/react-finder/examples/
+http://frezc.github.io/react-finder/examples/
 
 ## TODO
 - [ ] complete doc.
