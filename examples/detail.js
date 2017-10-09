@@ -1,19 +1,19 @@
 webpackJsonp([2],{
 
-/***/ 377:
+/***/ 378:
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(378);
+module.exports = __webpack_require__(379);
 
 
 /***/ }),
 
-/***/ 378:
+/***/ 379:
 /***/ (function(module, exports) {
 
 
 
 /***/ })
 
-},[377]);
+},[378]);
 //# sourceMappingURL=detail.js.map

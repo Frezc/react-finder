@@ -24613,7 +24613,8 @@ module.exports = ReactDOMInvalidARIAHook;
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ReactFinder__ = __webpack_require__(251);
-throw new Error("Cannot find module \"../assets/styles.css\"");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__assets_styles_css__ = __webpack_require__(377);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__assets_styles_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__assets_styles_css__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_sortable_hoc__ = __webpack_require__(46);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_sortable_hoc___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_sortable_hoc__);
 /* unused harmony reexport SortableElement */
@@ -30376,18 +30377,24 @@ module.exports = baseSet;
 
 
 /***/ }),
-/* 377 */,
+/* 377 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
 /* 378 */,
 /* 379 */,
 /* 380 */,
-/* 381 */
+/* 381 */,
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(382);
+module.exports = __webpack_require__(383);
 
 
 /***/ }),
-/* 382 */
+/* 383 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30475,5 +30482,5 @@ var Test = function (_PureComponent) {
 __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Test, null), document.getElementById('__react-content'));
 
 /***/ })
-],[381]);
+],[382]);
 //# sourceMappingURL=index.js.map
