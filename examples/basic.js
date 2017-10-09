@@ -22,7 +22,7 @@ class Test extends PureComponent {
           selectedKey={this.state.selectedKey}
           onSelect={(selectedKey, { data }) => this.setState({ selectedKey, selectedData: data })}
         />
-        selectedKey{this.state.selectedKey}
+        selectedKey: {this.state.selectedKey}
       </div>
 
     );

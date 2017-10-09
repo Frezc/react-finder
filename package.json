@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "description": "",
   "main": "./lib/index",
+  "module": "./es/index",
   "scripts": {
     "build": "rc-tools run build",
     "compile": "rc-tools run compile --babel-runtime",
@@ -12,11 +13,19 @@
     "lint": "rc-tools run lint",
     "lint:fix": "rc-tools run lint --fix",
     "test": "jest",
-    "prepublish": "rc-tools run guard",
+    "prepublish": "npm run compile",
     "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [],
-  "author": "",
+  "files": [
+    "assets/*.css",
+    "assets/*.png",
+    "assets/*.gif",
+    "dist",
+    "es",
+    "lib"
+  ],
+  "author": "frezc",
   "license": "MIT",
   "config": {
     "port": 8010
