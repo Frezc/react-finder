@@ -1,4 +1,4 @@
-webpackJsonp([1],[
+webpackJsonp([0],[
 /* 0 */
 /***/ (function(module, exports) {
 
@@ -30385,14 +30385,16 @@ module.exports = baseSet;
 /***/ }),
 /* 378 */,
 /* 379 */,
-/* 380 */
+/* 380 */,
+/* 381 */,
+/* 382 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(381);
+module.exports = __webpack_require__(383);
 
 
 /***/ }),
-/* 381 */
+/* 383 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -30475,5 +30477,5 @@ var Test = function (_PureComponent) {
 __WEBPACK_IMPORTED_MODULE_1_react_dom___default.a.render(__WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Test, null), document.getElementById('__react-content'));
 
 /***/ })
-],[380]);
+],[382]);
 //# sourceMappingURL=drag.js.map
