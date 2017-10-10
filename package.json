@@ -4,19 +4,26 @@
   "description": "",
   "main": "./lib/index",
   "module": "./es/index",
+  "homepage": "https://github.com/Frezc/react-finder",
   "scripts": {
-    "build": "rc-tools run build",
-    "compile": "rc-tools run compile --babel-runtime",
-    "gh-pages": "rc-tools run gh-pages",
-    "start": "rc-tools run server",
-    "pub": "rc-tools run pub --babel-runtime",
-    "lint": "rc-tools run lint",
-    "lint:fix": "rc-tools run lint --fix",
+    "build": "rclib-tools run build",
+    "compile": "rclib-tools run compile --babel-runtime",
+    "gh-pages": "rclib-tools run gh-pages",
+    "start": "rclib-tools run server",
+    "pub": "rclib-tools run pub --babel-runtime",
+    "lint": "rclib-tools run lint",
+    "lint:fix": "rclib-tools run lint --fix",
     "test": "jest",
-    "prepublish": "npm run compile",
     "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Frezc/react-finder.git"
+  },
+  "bugs": {
+    "url": "http://github.com/Frezc/react-finder/issues"
+  },
   "files": [
     "assets/*.css",
     "assets/*.png",
@@ -32,7 +39,7 @@
   },
   "devDependencies": {
     "jest": "^21.1.0",
-    "rc-tools": "^7.0.0",
+    "rclib-tools": "0.0.1",
     "react-dom": "^15.6.1"
   },
   "dependencies": {
