@@ -7,12 +7,14 @@
   font-size: 14px;
   min-height: 400px;
   overflow: auto; }
+
 .react-finder-column {
   border-right: solid 1px lightgray;
   max-height: 600px;
   min-height: inherit;
   min-width: 200px;
   overflow-y: auto; }
+
 .react-finder-item {
   padding: 6px;
   cursor: pointer;
@@ -24,6 +26,7 @@
   .react-finder-item.selected {
     background-color: dodgerblue;
     color: white; }
+
 .react-finder-detail {
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -39,7 +42,5 @@
       -ms-flex-pack: center;
           justify-content: center;
   padding: 0 1.5em; }
-
-/*# sourceMappingURL=styles.css.map */
 
 /*# sourceMappingURL=basic.css.map*/
