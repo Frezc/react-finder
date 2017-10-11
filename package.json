@@ -11,10 +11,14 @@
     "gh-pages": "rclib-tools run gh-pages",
     "start": "rclib-tools run server",
     "pub": "rclib-tools run pub --babel-runtime",
+    "publish": "rclib-tools run publish --babel-runtime",
     "lint": "rclib-tools run lint",
     "lint:fix": "rclib-tools run lint --fix",
     "test": "jest",
-    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls"
+    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "pub-d": "rclib-tools run publish --babel-runtime",
+    "precommit": "npm run lint",
+    "prepublishOnly": "rclib-tools run guard"
   },
   "keywords": [],
   "repository": {
@@ -35,17 +39,19 @@
   "author": "frezc",
   "license": "MIT",
   "config": {
-    "port": 8010
+    "port": 8000
   },
   "devDependencies": {
     "jest": "^21.1.0",
-    "rclib-tools": "0.0.1",
-    "react-dom": "^15.6.1"
+    "rclib-tools": "^0.1.7",
+    "react-dom": "^15.6.1",
+    "pre-commit": "1.x"
   },
   "dependencies": {
     "lodash": "^4.17.4",
     "prop-types": "^15.5.10",
     "react": "^15.6.1",
     "react-sortable-hoc": "^0.6.7"
-  }
+  },
+  "pre-commit": "precommit"
 }
