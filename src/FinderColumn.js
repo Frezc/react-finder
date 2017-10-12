@@ -15,19 +15,19 @@ class FinderColumn extends PureComponent {
     renderItem: PropTypes.func,
     onSelect: PropTypes.func,
     checkIsLeaf: PropTypes.func.isRequired,
-    shouldDragDisabled: PropTypes.func,
+    shouldDragDisabled: PropTypes.func
   }
 
   static defaultProps = {
     dataSource: [],
     selectedKey: null,
-    isLast: false,
+    isLast: false
   }
 
   render() {
     const {
       dataSource, selectedKey, renderItem, nodeKey, openedKey, onSelect, checkIsLeaf,
-      shouldDragDisabled,
+      shouldDragDisabled
     } = this.props;
 
     return (

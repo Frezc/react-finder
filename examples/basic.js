@@ -8,7 +8,7 @@ class Test extends PureComponent {
   state = {
     dataSource: mockTree(3),
     selectedKey: null,
-    selectedData: null,
+    selectedData: null
   }
 
   render() {

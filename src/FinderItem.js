@@ -13,13 +13,13 @@ class FinderItem extends PureComponent {
     selected: PropTypes.bool,
     opened: PropTypes.bool,
     onSelect: PropTypes.func,
-    checkIsLeaf: PropTypes.func.isRequired,
+    checkIsLeaf: PropTypes.func.isRequired
   }
 
   static defaultProps = {
     data: {},
     selected: false,
-    opened: false,
+    opened: false
   }
 
   renderDefault() {

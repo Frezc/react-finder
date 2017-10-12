@@ -6,7 +6,7 @@ import { mockTree } from '../src/utils';
 class Test extends PureComponent {
 
   state = {
-    dataSource: mockTree(3),
+    dataSource: mockTree(3)
   }
 
   render() {

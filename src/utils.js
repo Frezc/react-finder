@@ -10,7 +10,7 @@ export function mockTree(deep = 3) {
   if (deep > 0) {
     return mockArray(100).map((_, i) => ({
       key: `${deep}-${i}-${Math.random()}`,
-      children: mockTree(deep - 1),
+      children: mockTree(deep - 1)
     }));
   }
 }

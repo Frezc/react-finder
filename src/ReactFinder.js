@@ -24,7 +24,7 @@ class ReactFinder extends PureComponent {
     onDragEnd: PropTypes.func,
     onSelect: PropTypes.func, // (selectedKey, { data }) => {}
     // ({ column, index }) => Object
-    sortableContainerProps: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
+    sortableContainerProps: PropTypes.oneOfType([PropTypes.object, PropTypes.func])
   }
 
   static defaultProps = {
@@ -34,12 +34,12 @@ class ReactFinder extends PureComponent {
     isLeaf: null,
     style: {},
     sortableContainerProps: {},
-    draggable: false,
+    draggable: false
   }
 
   state = {
     selectedKey: null,
-    openedKeys: [],
+    openedKeys: []
   }
 
   constructor(props) {
@@ -53,7 +53,7 @@ class ReactFinder extends PureComponent {
     if ('selectedKey' in newProps) {
       this.setState({
         selectedKey: newProps.selectedKey,
-        openedKeys: this.calcOpenedKeysBySelectedKey(newProps.selectedKey),
+        openedKeys: this.calcOpenedKeysBySelectedKey(newProps.selectedKey)
       });
     }
   }
@@ -107,7 +107,7 @@ class ReactFinder extends PureComponent {
     const { onSelect, nodeKey } = this.props;
     if (!('selectedKey' in this.props)) {
       this.setState({
-        selectedKey: data[nodeKey],
+        selectedKey: data[nodeKey]
       });
     }
     if (onSelect) onSelect(data[nodeKey], { data });
@@ -122,7 +122,7 @@ class ReactFinder extends PureComponent {
       selectedData: findInTree(
         dataSource,
         n => n[nodeKey] === selectedKey, { childrenName: childrenPropName }
-      ),
+      )
     });
     if (el) {
       return (
@@ -136,7 +136,7 @@ class ReactFinder extends PureComponent {
 
   render() {
     const {
-      renderItem, nodeKey, style, sortableContainerProps, onDragEnd, dataSource, childrenPropName,
+      renderItem, nodeKey, style, sortableContainerProps, onDragEnd, dataSource, childrenPropName
     } = this.props;
     const { selectedKey, openedKeys } = this.state;
 
