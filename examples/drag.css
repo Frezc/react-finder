@@ -4,7 +4,6 @@
   display: flex;
   background-color: white;
   border: solid 1px lightgray;
-  font-size: .9em;
   min-height: 400px;
   overflow: auto; }
 
@@ -17,7 +16,8 @@
 
 .react-finder-item {
   padding: 6px;
-  cursor: pointer; }
+  cursor: pointer;
+  font-size: 13px; }
   .react-finder-item:hover {
     background-color: #ecf6fd; }
   .react-finder-item.opened {
