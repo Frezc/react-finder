@@ -4,7 +4,6 @@
     display: flex;
     background-color: white;
     border: solid 1px lightgray;
-    font-size: .9em;
     min-height: 400px;
     overflow: auto;
   }
@@ -20,6 +19,7 @@
   &-item {
     padding: 6px;
     cursor: pointer;
+    font-size: 13px;
 
     &:hover {
       background-color: #ecf6fd;
