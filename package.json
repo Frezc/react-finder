@@ -1,6 +1,6 @@
 {
   "name": "react-finder",
-  "version": "0.0.1",
+  "version": "0.1.1",
   "description": "",
   "main": "./lib/index",
   "module": "./es/index",
@@ -11,7 +11,6 @@
     "gh-pages": "rclib-tools run gh-pages",
     "start": "rclib-tools run server",
     "pub": "rclib-tools run pub --babel-runtime",
-    "publish": "rclib-tools run publish --babel-runtime",
     "lint": "rclib-tools run lint",
     "lint:fix": "rclib-tools run lint --fix",
     "test": "jest",
@@ -43,9 +42,9 @@
   },
   "devDependencies": {
     "jest": "^21.1.0",
-    "rclib-tools": "^0.1.7",
-    "react-dom": "^15.6.1",
-    "pre-commit": "1.x"
+    "pre-commit": "1.x",
+    "rclib-tools": "^0.1.8",
+    "react-dom": "^15.6.1"
   },
   "dependencies": {
     "lodash": "^4.17.4",
