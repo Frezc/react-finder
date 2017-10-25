@@ -10,14 +10,18 @@
     "compile": "rclib-tools run compile --babel-runtime",
     "gh-pages": "rclib-tools run gh-pages",
     "start": "rclib-tools run server",
-    "pub": "rclib-tools run pub --babel-runtime",
+    "pub": "npm run lint:fix && rclib-tools run pub --babel-runtime",
     "lint": "rclib-tools run lint",
     "lint:fix": "rclib-tools run lint --fix",
     "test": "jest",
-    "coverage": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-    "pub-d": "rclib-tools run publish --babel-runtime",
-    "precommit": "npm run lint",
-    "prepublishOnly": "rclib-tools run guard"
+    "coverage": "jest --coverage",
+    "pub-d": "npm run lint:fix && rclib-tools run publish --babel-runtime",
+    "precommit": "npm run lint:fix",
+    "prepublishOnly": "rclib-tools run guard",
+    "coverage:upload": "jest --coverage && cat ./coverage/lcov.info | coveralls",
+    "clean": "rclib-tools run clean",
+    "init": "rclib-tools run init",
+    "update-snapshot": "jest -u"
   },
   "keywords": [],
   "repository": {
@@ -41,9 +45,12 @@
     "port": 8000
   },
   "devDependencies": {
-    "jest": "^21.1.0",
+    "enzyme": "^3.1.0",
+    "enzyme-adapter-react-15": "^1.0.2",
+    "enzyme-to-json": "^3.1.4",
+    "jest": "^21.2.0",
     "pre-commit": "1.x",
-    "rclib-tools": "^0.1.8",
+    "rclib-tools": "^0.1.13",
     "react-dom": "^15.6.1"
   },
   "dependencies": {
@@ -52,5 +59,28 @@
     "react": "^15.6.1",
     "react-sortable-hoc": "^0.6.7"
   },
-  "pre-commit": "precommit"
+  "pre-commit": [
+    "lint"
+  ],
+  "jest": {
+    "setupFiles": [
+      "./tests/setup.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*"
+    ],
+    "transform": {
+      "\\.tsx?$": "./node_modules/rclib-tools/scripts/jestPreprocessor.js",
+      "\\.jsx?$": "./node_modules/rclib-tools/scripts/jestPreprocessor.js"
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "moduleNameMapper": {
+      "^.+\\.(css|less|scss)$": "babel-jest"
+    }
+  },
+  "lib-tools-config": {
+    "disable_update": true
+  }
 }

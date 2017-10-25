@@ -3,11 +3,13 @@ import ReactDOM from 'react-dom';
 import ReactFinder from '../src';
 import { mockTree } from '../src/utils';
 
+const mockData = mockTree(3);
+
 class Test extends PureComponent {
 
   state = {
-    dataSource: mockTree(3),
-    selectedKey: null,
+    dataSource: mockData,
+    selectedKey: mockData[0].children[0].key,
     selectedData: null
   }
 

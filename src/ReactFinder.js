@@ -10,7 +10,7 @@ import set from 'lodash/set';
 
 class ReactFinder extends PureComponent {
   static propTypes = {
-    nodeKey: PropTypes.string, // 某一个节点的唯一key
+    nodeKey: PropTypes.string, // 某一个节点的唯一key的标识符
     dataSource: PropTypes.arrayOf(PropTypes.object), // 数据源
     childrenPropName: PropTypes.string, // 子节点参数的名称
     renderItem: PropTypes.func, // ({ data, isLeaf }) => ReactElement
