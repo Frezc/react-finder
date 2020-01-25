@@ -49,12 +49,19 @@ class ReactFinder extends PureComponent {
     this.state.openedKeys = this.calcOpenedKeysBySelectedKey(this.state.selectedKey);
   }
 
-  componentWillReceiveProps(newProps) {
-    if ('selectedKey' in newProps) {
+  /**
+   * compatible react@15 & react@16
+   * todo: write in [getDerivedStateFromProps](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops)
+   */
+  componentDidUpdate() {
+    const { selectedKey } = this.props;
+    if ('selectedKey' in this.props && selectedKey !== this.state.selectedKey) {
+      /* eslint-disable react/no-did-update-set-state */
       this.setState({
-        selectedKey: newProps.selectedKey,
-        openedKeys: this.calcOpenedKeysBySelectedKey(newProps.selectedKey)
+        selectedKey,
+        openedKeys: this.calcOpenedKeysBySelectedKey(selectedKey)
       });
+      /* eslint-enable react/no-did-update-set-state */
     }
   }
 
