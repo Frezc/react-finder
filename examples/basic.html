@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>basic.js - example - react-finder@0.1.4</title>
+  <title>basic.js - example - react-finder@0.2.0</title>
   <meta name="viewport"
         content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
   <meta charset="utf-8"/>
@@ -257,13 +257,13 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
     document.writeln('<script src="https://as.alipayobjects.com/g/component/es6-promise/3.2.2/es6-promise.min.js"'+'>'+'<'+'/'+'script>');
   }
   </script>
-  <link rel="stylesheet" href="basic.css" />
+  <link rel="stylesheet" href="../common.css" />
 </head>
 
 <body>
   <div class="container">
     <div class="header">
-      <h1>react-finder@0.1.4</h1>
+      <h1>react-finder@0.2.0</h1>
 
       <p></p>
     </div>
@@ -272,26 +272,35 @@ Monokai Sublime style. Derived from Monokai by noformnocontent http://nn.mit-lic
     <div class="highlight"><pre><code language="undefined">import React, { PureComponent } from 'react';
 import ReactDOM from 'react-dom';
 import ReactFinder from '../src';
-import { mockTree } from '../src/utils';
+import { mockTree, findInTree, atTreePath } from '../src/utils';
+
+const mockData = mockTree(3);
 
 class Test extends PureComponent {
 
   state = {
-    dataSource: mockTree(3),
-    selectedKey: null,
+    dataSource: mockData,
+    selectedKey: mockData[0].children[0].key,
     selectedData: null
   }
 
   render() {
+    const { dataSource } = this.state;
     return (
       &lt;div&gt;
         &lt;ReactFinder
-          dataSource={this.state.dataSource}
+          dataSource={dataSource}
           renderItem={({ data, isLeaf }) =&gt; (
             &lt;span&gt;{data.key} {!isLeaf &amp;&amp; &lt;span style={{ float: 'right' }}&gt;&gt;&lt;/span&gt;}&lt;/span&gt;
           )}
           selectedKey={this.state.selectedKey}
-          onSelect={(selectedKey, { data }) =&gt; this.setState({ selectedKey, selectedData: data })}
+          onSelect={(selectedKey, { data }) =&gt; {
+            this.setState({ selectedKey, selectedData: data });
+            const nodeData = findInTree(dataSource, (node) =&gt; node.key === selectedKey, { withAppendData: true });
+            if (nodeData) {
+              console.log('selected node', atTreePath(dataSource, nodeData.loc));
+            }
+          }}
         /&gt;
         selectedKey: {this.state.selectedKey}
       &lt;/div&gt;
